@@ -1,13 +1,57 @@
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <title>Webpack Starter Kit</title>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:300,400,700&display=swap" rel="stylesheet">
+    <title>Overlook</title>
   </head>
   <body>
-    <h1>I can do this!</h1>
-
-    <img src="./images/turing-logo.png" alt="turing logo" height="100px" width="100px">
-
+    <section class="login-section center">
+      <h1 class="login-page">Welcome</h1>
+      <h3 class="login-page">Please login with your credentials</h3>
+      <form class="login-form" action="index.html" method="post">
+        <label for="username">Username</label>
+        <input class="username-input" id="username" type="text" placeholder="Username">
+        <label for="password">Password</label>
+        <input class="password-input" id="password" type="text" placeholder="Password">
+        <button class="login-submit-button" type="button" name="button">Login</button>
+      </form>
+    </section>
+    <section class="customer-section center hidden">
+      <div class="customer-info center">
+        <h3 class="customer-bookings">Your Bookings</h3>
+        <h4 class="customer-spending">You've spent a total of $AmountSpent</h4>
+        <div class="available-room room-div hidden">
+          <h3 class="room-type">Room Type - Cost Per Night</h3>
+          <p>Number of Beds</p>
+          <p>Bed Size</p>
+          <p>Bidet (Yes/No)</p>
+          <p>Room Number</p>
+        </div>
+      </div>
+      <form class="room-search" action="index.html" method="post">
+        <label for="find-booking-by-date">Select Date</label>
+        <input id="find-booking-by-date" type="date"
+          value="current-date"
+          min="current-date" max="2020-12-31">
+       <label for="filter-room-by-type">Select Room Type</label>
+       <input id="filter-room-by-type" type="text" placeholder="Room Type">
+       <button class="filter-rooms-button" type="button" name="button">Find Rooms</button>
+      </form>
+      <div class="available-room room#-div hidden">
+        <h3 class="room-type">Room Type - Cost Per Night</h3>
+        <p>Number of Beds</p>
+        <p>Bed Size</p>
+        <p>Bidet (Yes/No)</p>
+        <p>Room Number</p>
+      </div>
+      <div class="error-no-rooms center hidden">
+        <h3 class="center">We're Sorry!</h3>
+        <h4 class="center">It seems there are no rooms available based upon your search filters, please try again.</h4>
+      </div>
+    </section>
+    <section class="manager-section center hidden">
+      
+    </section>
     <!-- Do not include the index.js or main.bundle.js file here - it is done automatically by the webpack server -->
   </body>
 </html>
