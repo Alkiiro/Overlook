@@ -1,6 +1,22 @@
 /* This is an example of using Sass, otherwise plain CSS works too*/
-$primary-background: pink;
+// $primary-background: pink;
+//
+// body {
+//   background-color: $primary-background;
+// }
+
 
 body {
-  background-image: url('');
+  background-image: url('../images/overlook-login-img.jpg');
+  color: #fff5eb;
+  display: grid;
+  font-family: 'Noto Sans SC', sans-serif;
+}
+
+.hidden {
+  display: none;
+}
+
+.center {
+
 }
