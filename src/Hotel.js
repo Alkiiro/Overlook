@@ -34,7 +34,7 @@ class Hotel {
     let bookedRoomIdsByDate = bookingsByDate.map(booking => booking.roomNumber);
     this.unavailableRooms = this.rooms.filter(room => bookedRoomIdsByDate.includes(room.number));
     this.availableRooms = this.rooms.filter(room => !bookedRoomIdsByDate.includes(room.number));
-    domUpdates.displayAvailableRooms()
+    domUpdates.displayAvailableRooms(this.availableRooms);
   }
 
   totalRoomsAvailable() {

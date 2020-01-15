@@ -8,7 +8,8 @@ class Customer {
   }
 
   toggleBookings() {
-    domUpdates.toggleCustomerBookings();
+    console.log(this.customerBookings);
+    domUpdates.toggleCustomerBookings(this.customerBookings);
   }
 }
 
